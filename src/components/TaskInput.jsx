@@ -26,7 +26,10 @@ export const TaskInput = ({ addTaskFunc }) => {
         onKeyUp={taskInputOnKeyUp}
         value={taskInput}
       />
-      <button className="btn btn-primary" onClick={addTaskBtnOnClick}>
+      <button
+        className="btn btn-primary"
+        onClick={(event) => (taskInput !== "" ? addTaskBtnOnClick() : {})}
+      >
         Add
       </button>
     </div>
